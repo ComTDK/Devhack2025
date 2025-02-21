@@ -10,7 +10,7 @@ var connect = "postgres://postgres:123456789@localhost/devhackdb"; //DB connect 
 
 app.engine("dust", cons.dust);
 
-app.set("view enigne", "dust");
+app.set("view engine", "dust");
 app.set("views", __dirname + "/views");
 
 app.use(express.static(path.join(__dirname, "public")));
