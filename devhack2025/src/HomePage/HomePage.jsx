@@ -18,7 +18,6 @@ const HomePage = () => {
 
   return (
     <div className="main-layout">
-      <Navbar />
       {/* Main content section on the left */}
       <div className="content">
         <section className="memories">

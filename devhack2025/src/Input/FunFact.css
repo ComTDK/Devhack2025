@@ -1,0 +1,77 @@
+/* Fun Fact Container */
+.fun-fact {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+label {
+  font-size: 16px;
+  color: #213555;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+}
+
+/* Heading */
+.fun-fact h3 {
+  font-size: 20px;
+  color: #213555;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Grid for hobbies */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+  gap: 20px;
+  margin-bottom: 30px;
+  justify-items: center;
+}
+
+/* Styling each hobby button */
+.icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #a2b9c7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  font-size: 32px;
+  border: 2px solid transparent;
+}
+
+/* Hover effect */
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* When icon is selected */
+.icon.selected {
+  background-color: #848ea2;
+  color: white;
+  transform: scale(1.2);
+}
+
+/* Input field for fun fact */
+.fun-fact-input {
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* Input box styling */
+.fun-fact-input input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
