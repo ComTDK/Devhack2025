@@ -27,23 +27,28 @@ const InputPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
 
-    const userData = {
-      name,
-      email,
-      education,
-      experience,
-      linkedIn,
-      funFact,
-      event,
-    };
+    // Randomized score between 0 and 100
+    const randomScore = Math.floor(Math.random() * 101);
 
+    const userData = {
+      name: name,
+      contactEmail: email, // Fix column name here to match your database column
+      contactLinkedIn: linkedIn, // Fix column name here
+      education: education,
+      experience: experience,
+      score: randomScore, // Add the randomized score here
+      funfact: funFact, // Fix column name here
+      enjoyTalking: Math.floor(Math.random() * 10), // If you want to keep a default value
+      event: event,
+    };
+    console.log(userData);
     try {
       const response = await fetch("http://localhost:3000/connection", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify(userData), // Convert the object to a JSON string
       });
 
       if (response.ok) {
@@ -52,9 +57,9 @@ const InputPage = () => {
         // Clear form fields after submission
         setName("");
         setEmail("");
+        setLinkedIn("");
         setEducation("");
         setExperience("");
-        setLinkedIn("");
         setFunFact("");
         setEvent("");
         setShowFunFact(1);
@@ -149,7 +154,7 @@ const InputPage = () => {
               Next →
             </button>
           ) : (
-            <button type="submit" className="next-btn">
+            <button type="submit" className="next-btn" onClick={handleSubmit}>
               Submit
             </button>
           )}

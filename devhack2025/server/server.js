@@ -53,11 +53,46 @@ app.get(`/${TABLE_NAME}`, async (req, res) => {
  */
 app.post(`/${TABLE_NAME}`, async (req, res) => {
   try {
-    const { name, email, education, experience, linkedIn, fun_fact, event } =
-      req.body;
+    console.log(req.body);
+
+    const {
+      name,
+      contactEmail,
+      contactLinkedIn,
+      education,
+      experience,
+      score,
+      funfact,
+      enjoyTalking,
+      event,
+    } = req.body;
+    console.log(
+      `INSERT INTO ${TABLE_NAME} (name, contactEmail, contactLinkedIn, education, experience, score, funfact, enjoyTalking, event) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`,
+      [
+        name,
+        contactEmail,
+        contactLinkedIn,
+        education,
+        experience,
+        score,
+        funfact,
+        enjoyTalking,
+        event,
+      ]
+    );
     const result = await pool.query(
-      `INSERT INTO ${TABLE_NAME} (name, email, education, experience, linkedIn, fun_fact, event) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
-      [name, email, education, experience, linkedIn, fun_fact, event]
+      `INSERT INTO ${TABLE_NAME} (name, contactEmail, contactLinkedIn, education, experience, score, funfact, enjoyTalking, event) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`,
+      [
+        name,
+        contactEmail,
+        contactLinkedIn,
+        education,
+        experience,
+        score,
+        funfact,
+        enjoyTalking,
+        event,
+      ]
     );
     res.json(result.rows[0]);
   } catch (err) {
@@ -74,12 +109,31 @@ app.post(`/${TABLE_NAME}`, async (req, res) => {
 app.put(`/${TABLE_NAME}/:id`, async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, email, education, experience, linkedIn, fun_fact, event } =
-      req.body;
+    const {
+      name,
+      contactEmail,
+      contactLinkedIn,
+      education,
+      experience,
+      score,
+      funfact,
+      enjoyTalking,
+      event,
+    } = req.body;
 
     const result = await pool.query(
-      `UPDATE ${TABLE_NAME} SET name = $1, email = $2, education = $3, experience = $4, linkedIn = $5, fun_fact = $6, event = $7 WHERE id = $8 RETURNING *`,
-      [name, email, education, experience, linkedIn, fun_fact, event, id]
+      `UPDATE ${TABLE_NAME} SET name = $1, contactEmail = $2, contactLinkedIn = $3, education = $4, experience = $5, score = $6, funfact = $7, enjoyTalking = $8, event = $9 WHERE id = $8 RETURNING *`,
+      [
+        name,
+        contactEmail,
+        contactLinkedIn,
+        education,
+        experience,
+        score,
+        funfact,
+        enjoyTalking,
+        event,
+      ]
     );
 
     if (result.rowCount === 0) {
