@@ -2,14 +2,15 @@
 
 /* Styles for BasicInfo */
 .basic-info .input-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px; /* Increased space between input groups */
 }
 
 .basic-info .input-group h3 {
   font-size: 16px;
   color: #213555;
-  margin-bottom: 8px;
+  margin-bottom: 10px; /* Increased space between the label and input */
   display: block;
+  line-height: 1.5; /* Improved line spacing for better readability */
 }
 
 .basic-info .input-group input {
@@ -18,9 +19,10 @@
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 5px; /* Small gap between the label and the input */
 }
 
-/* Styles for Page */
+/* Styling for Input Page */
 .input-page {
   background-color: #f5efe7;
   padding: 40px;
@@ -31,69 +33,113 @@
   width: 100%;
 }
 
-/* Header styling for the page */
+/* Header Styling */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* More space below the header */
 }
 
 header h1 {
   font-size: 28px;
   font-weight: 600;
   color: #213555;
+  line-height: 1.4; /* Add line spacing for header */
 }
 
 header p {
   color: #888;
   font-size: 16px;
+  line-height: 1.6; /* Increased line spacing for paragraph */
+  margin-top: 10px; /* Added space between header and paragraph */
 }
 
-/* Footer button styling */
+/* Footer with Next and Previous Buttons */
 footer {
   display: flex;
-  justify-content: flex-end; /* Push the button to the right */
-  margin-top: 20px;
+  justify-content: space-between; /* Space the buttons out on opposite sides */
+  margin-top: 40px;
 }
 
-footer .next-btn {
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #213555;
-  color: white;
-  border: none;
-  border-radius: 5px;
+/* Previous Button */
+footer .previous-btn {
+  font-size: 14px;
+  background-color: transparent; /* Remove background */
+  color: #213555; /* Set text color */
   cursor: pointer;
-  transition: background-color 0.3s;
+  border: none; /* Make sure no border */
+  padding: 0; /* Remove padding */
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+footer .previous-btn:hover {
+  color: #213555; /* Keep text color */
+  transform: scale(1.1); /* Slight scale up on hover */
+}
+
+/* Next Button */
+footer .next-btn {
+  font-size: 14px;
+  background-color: transparent; /* Remove background */
+  color: #213555; /* Set text color */
+  cursor: pointer;
+  border: none; /* Make sure no border */
+  padding: 0; /* Remove padding */
+  transition: color 0.3s, transform 0.3s ease;
 }
 
 footer .next-btn:hover {
-  background-color: #f1356d;
+  color: #213555; /* Keep text color */
+  transform: scale(1.1); /* Slight scale up on hover */
 }
 
-/* === Additional CSS centre aligned ===*/
-/* Ensuring the body fills the screen and centers the form */
+/* Ensure the body fills the screen and centers the form */
 body {
   background-color: #f5efe7; /* Light background color */
   display: flex;
-  justify-content: center; /* Centering the content horizontally */
-  align-items: center; /* Centering the content vertically */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   min-height: 100vh; /* Ensure full viewport height */
   margin: 0;
 }
 
-/* Input page styling with centered content */
+/* Center the input page box */
 .input-page {
-  background-color: white; /* Set the background color of the box to white */
+  background-color: white;
   padding: 40px;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow to create depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add depth with shadow */
   border-radius: 10px;
   margin: 0 auto; /* Center the box horizontally */
+  max-height: 80vh;
+  overflow-y: auto;
 }
 
-/* Optional: Add a max height with scroll for long content */
+/* Ensure inputs are well aligned */
+.input-group {
+  margin-bottom: 25px; /* Increased space between sections */
+}
+
+/* Optional: Add max-height with scroll for long content */
 .input-page {
   max-height: 80vh;
   overflow-y: auto;
+}
+
+/* Basic Info Button */
+/* Styles for BasicInfo */
+/* Resizing the input boxes */
+.basic-info .input-group input {
+  width: calc(
+    100% - 30px
+  ); /* Adjust the input width by calculating the space */
+  padding: 10px 12px; /* Adjust padding */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  display: block; /* Make input field a block element */
+  margin-bottom: 10px;
+  margin-left: auto; /* Center the input box horizontally */
+  margin-right: auto; /* Center the input box horizontally */
 }

@@ -1,0 +1,86 @@
+/* Profile Container */
+.profile-container {
+  width: 100%; /* Set width to make the profile container larger */
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+/* Flexbox for photo and details */
+.photo-name-container {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+/* Profile Photo with Shadow and Circle */
+.profile-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; /* Ensures the image is circular */
+  object-fit: cover; /* Ensures the image fills the circle properly */
+  margin-right: 20px; /* Adds space between the photo and text */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow around the photo */
+}
+
+.profile-details {
+  text-align: left;
+}
+
+.profile-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.profile-header h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Profile Body */
+.profile-body {
+  padding: 40px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 30px; /* Increased space between sections */
+}
+
+.section h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #213555;
+  margin-bottom: 10px;
+  display: inline-flex; /* Align icon and text inline */
+  align-items: center; /* Align the icon and text vertically */
+}
+
+.section p,
+.section ul {
+  font-size: 16px;
+  color: #555;
+  margin-left: 20px; /* Indent the list for better visual hierarchy */
+}
+
+ul {
+  list-style-type: none; /* Remove the default list style */
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
