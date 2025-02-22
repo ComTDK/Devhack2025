@@ -46,12 +46,53 @@ app.get(`/${TABLE_NAME}`, async (req, res) => {
   }
 });
 
+//this const of req.body only works for connections table
+/**
+ * APP.POST is an API end point for the server to communicate with the database to tell it to INSERT to a table. We use the function 'post' with that
+ * it takes request and response. Request contains what the front end gives to us (should contain the same fields of table)
+ */
 app.post(`/${TABLE_NAME}`, async (req, res) => {
   try {
-    const { brand, model, year, color } = req.body;
+    console.log(req.body);
+
+    const {
+      name,
+      contactEmail,
+      contactLinkedIn,
+      education,
+      experience,
+      score,
+      funfact,
+      enjoyTalking,
+      event,
+    } = req.body;
+    console.log(
+      `INSERT INTO ${TABLE_NAME} (name, contactEmail, contactLinkedIn, education, experience, score, funfact, enjoyTalking, event) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`,
+      [
+        name,
+        contactEmail,
+        contactLinkedIn,
+        education,
+        experience,
+        score,
+        funfact,
+        enjoyTalking,
+        event,
+      ]
+    );
     const result = await pool.query(
-      `INSERT INTO ${TABLE_NAME} (brand, model, year, color) VALUES ($1, $2, $3, $4) RETURNING *`,
-      [brand, model, year, color]
+      `INSERT INTO ${TABLE_NAME} (name, contactEmail, contactLinkedIn, education, experience, score, funfact, enjoyTalking, event) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *`,
+      [
+        name,
+        contactEmail,
+        contactLinkedIn,
+        education,
+        experience,
+        score,
+        funfact,
+        enjoyTalking,
+        event,
+      ]
     );
     res.json(result.rows[0]);
   } catch (err) {
@@ -60,18 +101,43 @@ app.post(`/${TABLE_NAME}`, async (req, res) => {
   }
 });
 
+//same thing here, but PUT = UPDATE
+/**
+ * We have a separate id constant to take from req.params because remember in your database creation, you have a constant that says SERIAL PRIMARY KEY. It will inc+ the id each time a table is created
+ *    Take that one from req.params and body would be the rest (Why?)
+ */
 app.put(`/${TABLE_NAME}/:id`, async (req, res) => {
   try {
     const { id } = req.params;
-    const { brand, model, year, color } = req.body;
+    const {
+      name,
+      contactEmail,
+      contactLinkedIn,
+      education,
+      experience,
+      score,
+      funfact,
+      enjoyTalking,
+      event,
+    } = req.body;
 
     const result = await pool.query(
-      `UPDATE ${TABLE_NAME} SET brand = $1, model = $2, year = $3, color = $4 WHERE id = $5 RETURNING *`,
-      [brand, model, year, color, id]
+      `UPDATE ${TABLE_NAME} SET name = $1, contactEmail = $2, contactLinkedIn = $3, education = $4, experience = $5, score = $6, funfact = $7, enjoyTalking = $8, event = $9 WHERE id = $8 RETURNING *`,
+      [
+        name,
+        contactEmail,
+        contactLinkedIn,
+        education,
+        experience,
+        score,
+        funfact,
+        enjoyTalking,
+        event,
+      ]
     );
 
     if (result.rowCount === 0) {
-      return res.status(404).send("Car not found");
+      return res.status(404).send("Connection not found");
     }
 
     res.json(result.rows[0]);
@@ -81,6 +147,7 @@ app.put(`/${TABLE_NAME}/:id`, async (req, res) => {
   }
 });
 
+//again, only for connection table (just change names), but PK used is still id so to delete, we just req the specific id
 app.delete(`/${TABLE_NAME}/:id`, async (req, res) => {
   try {
     const { id } = req.params;
@@ -90,10 +157,10 @@ app.delete(`/${TABLE_NAME}/:id`, async (req, res) => {
     ]);
 
     if (result.rowCount === 0) {
-      return res.status(404).send("Car not found");
+      return res.status(404).send("Connection not found");
     }
 
-    res.json({ message: "Car deleted successfully" });
+    res.json({ message: "Connection deleted successfully" });
   } catch (err) {
     console.error("Database Delete Error:", err);
     res.status(500).send("Server Error");
