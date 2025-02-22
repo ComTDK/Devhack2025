@@ -20,6 +20,7 @@ h2 {
 .main-layout {
   display: flex;
   justify-content: flex-start; /* Align everything to the left */
+  flex: 1;
   padding: 20px;
   gap: 30px; /* Add space between the main content and sidebar */
   flex-wrap: wrap; /* Allow content to wrap for responsiveness */
