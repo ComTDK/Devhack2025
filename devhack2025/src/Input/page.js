@@ -15,7 +15,7 @@ const InputPage = () => {
     if (showFunFact > 1) setShowFunFact(showFunFact - 1);
   };
   return (
-    <div className="input-page">
+    <div className="input-page main-layout">
       {/* Header */}
       <header>
         <h1>Let's hear from you!</h1>

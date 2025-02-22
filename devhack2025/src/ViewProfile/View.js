@@ -9,13 +9,13 @@ import {
 } from "react-icons/fa"; // Importing appropriate icons
 import "./View.css"; // Add any specific styles for the view here
 
-const View = () => {
+const View = ({ name, email, experience, funFact }) => {
   return (
-    <div className="profile-container">
+    <div className="main-layout">
       <div className="profile-header">
         <img src="profile-photo-url" alt="profile" className="profile-photo" />
         <div className="profile-info">
-          <h1>John Chauhari</h1>
+          <h1>{name}</h1>
           <h3>Computer Science @ University of Manitoba</h3>
         </div>
       </div>
@@ -26,7 +26,7 @@ const View = () => {
           <h4>
             <FaEnvelope style={{ marginRight: "10px" }} /> Contact
           </h4>
-          <p>Email: John.chauharii@gmail.com</p>
+          <p>Email: {email}</p>
           <p>Phone: 2045551233</p>
         </div>
 
@@ -36,8 +36,7 @@ const View = () => {
             <FaBriefcase style={{ marginRight: "10px" }} /> Experience and
             Positions
           </h4>
-          <p>Figma Developer Division CEO</p>
-          <p>Cashier at Two Cups</p>
+          {experience}
         </div>
 
         {/* Events Section with Icon */}
@@ -55,7 +54,7 @@ const View = () => {
           <h4>
             <FaBook style={{ marginRight: "10px" }} /> Fun Fact about me
           </h4>
-          <p>"I like to twiddle on my ass hair"</p>
+          <p>"{funFact}"</p>
         </div>
 
         {/* Hobbies Section with Icon */}

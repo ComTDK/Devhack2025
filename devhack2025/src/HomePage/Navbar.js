@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <div className="navbar">
       <div className="links">
         <div style={{ color: "white" }}>Home</div>
         <Link to="/profile">
@@ -23,7 +23,7 @@ const Navbar = () => {
           </div>
         </Link>
       </div>
-    </nav>
+    </div>
   );
 };
 
