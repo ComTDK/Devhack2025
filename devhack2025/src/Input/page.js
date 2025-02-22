@@ -14,7 +14,7 @@ const InputPage = () => {
   const [event, setEvent] = useState("");
   // Function to handle the "Next" button click
   const handleNext = () => {
-    if (showFunFact < 4) setShowFunFact(showFunFact + 1); // Show the FunFact component when the Next button is clicked
+    if (showFunFact < 3) setShowFunFact(showFunFact + 1); // Show the FunFact component when the Next button is clicked
   };
   // Navigate to the previous page (back to page.js)
   const handlePrevious = () => {
