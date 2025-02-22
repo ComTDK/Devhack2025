@@ -13,7 +13,7 @@ const HomePage = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    arrows: false,
   };
 
   return (
@@ -51,7 +51,6 @@ const HomePage = () => {
       {/* Sidebar with a button to go to the input page */}
       <div className="sidebar-placeholder">
         <Link to="/input">
-          {" "}
           {/* Link to navigate to InputPage */}
           <button className="go-to-input-btn">Add Connection</button>
         </Link>

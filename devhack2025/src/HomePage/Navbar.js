@@ -5,9 +5,23 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="links">
-        <div style={{ color: "white" }}>Home</div>
+        <Link to="/">
+          {/* Link to navigate to InputPage */}
+          <div
+            style={{
+              color: "white",
+              backgroundColor: "#D8C4B6",
+              borderRadius: "8px",
+              padding: "10px 20px",
+              marginLeft: "16px",
+              textDecoration: "none",
+            }}
+          >
+            Home
+          </div>
+        </Link>
+
         <Link to="/profile">
-          {" "}
           {/* Link to Profile page */}
           <div
             style={{

@@ -1,11 +1,15 @@
 /* Profile Container */
 .profile-container {
-  width: 100%; /* Set width to make the profile container larger */
   margin: 40px auto;
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex-col;
+  /* Align everything to the left */
+  flex: 1;
+  gap: 30px; /* Add space between the main content and sidebar */
+  flex-wrap: wrap; /* Allow content to wrap for responsiveness */
 }
 
 /* Profile Header */
