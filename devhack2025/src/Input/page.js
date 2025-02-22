@@ -90,7 +90,7 @@ const InputPage = () => {
               placeholder="Enter your name"
             />
           </div>
-          )}
+
           <div className="input-group">
             <h4>Contact</h4>
             <label>LinkedIn / Website</label>
