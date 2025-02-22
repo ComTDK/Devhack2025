@@ -11,7 +11,7 @@ import "./View.css"; // Add any specific styles for the view here
 
 const View = ({ name, email, experience, funFact }) => {
   return (
-    <div className="main-layout">
+    <div className="main-layout profile-container">
       <div className="profile-header">
         <img src="profile-photo-url" alt="profile" className="profile-photo" />
         <div className="profile-info">
@@ -27,7 +27,6 @@ const View = ({ name, email, experience, funFact }) => {
             <FaEnvelope style={{ marginRight: "10px" }} /> Contact
           </h4>
           <p>Email: {email}</p>
-          <p>Phone: 2045551233</p>
         </div>
 
         {/* Experience and Positions Section with Icon */}

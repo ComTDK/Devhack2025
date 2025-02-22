@@ -17,7 +17,7 @@ import {
 import { useHistory } from "react-router-dom"; // Use useHistory for routing in v5
 import "./FunFact.css";
 
-function FunFact() {
+function FunFact({ setEvent, event }) {
   const [selectedHobbies, setSelectedHobbies] = useState([]); // State to track selected hobbies
   const history = useHistory(); // Use useHistory hook for navigation
 
@@ -32,19 +32,14 @@ function FunFact() {
     }
   };
 
-  // Navigate to the next page (for example, to the final page or another page)
-  const handleNext = () => {
-    history.push("/nextpage"); // Replace with the actual path of the next page
-  };
-
   return (
     <div className="fun-fact">
-      <h3>Hobbies</h3>
+      {/* <h3>Hobbies</h3>
       <label>Click on the icons that apply for you</label>
       <br />
 
       {/* First row of hobbies */}
-      <div className="hobbies-grid">
+      {/* <div className="hobbies-grid">
         <div
           className={`icon ${
             selectedHobbies.includes("coffee") ? "selected" : ""
@@ -80,7 +75,7 @@ function FunFact() {
       </div>
 
       {/* Second row of hobbies */}
-      <div className="hobbies-grid">
+      {/* <div className="hobbies-grid">
         <div
           className={`icon ${
             selectedHobbies.includes("cooking") ? "selected" : ""
@@ -116,7 +111,7 @@ function FunFact() {
       </div>
 
       {/* Third row of hobbies */}
-      <div className="hobbies-grid">
+      {/* <div className="hobbies-grid">
         <div
           className={`icon ${
             selectedHobbies.includes("cycling") ? "selected" : ""
@@ -149,13 +144,17 @@ function FunFact() {
         >
           <FaVideo />
         </div>
-      </div>
-
+      </div> */}
       <div className="fun-fact-input">
         <br />
         <h3>Fun fact</h3>
-        <label>Tell us one fun fact about you!</label>
-        <input type="text" placeholder="Enter your fun fact" />
+        <label>Tell us one fun fact about bro!</label>
+        <input
+          type="text"
+          value={event}
+          onChange={(e) => setEvent(e.target.value)}
+          placeholder="Enter your fun fact"
+        />
       </div>
     </div>
   );
