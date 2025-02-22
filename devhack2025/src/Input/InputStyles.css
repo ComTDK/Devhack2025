@@ -1,0 +1,99 @@
+/* InputStyles.css */
+
+/* Styles for BasicInfo */
+.basic-info .input-group {
+  margin-bottom: 20px;
+}
+
+.basic-info .input-group h3 {
+  font-size: 16px;
+  color: #213555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.basic-info .input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styles for Page */
+.input-page {
+  background-color: #f5efe7;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Header styling for the page */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #213555;
+}
+
+header p {
+  color: #888;
+  font-size: 16px;
+}
+
+/* Footer button styling */
+footer {
+  display: flex;
+  justify-content: flex-end; /* Push the button to the right */
+  margin-top: 20px;
+}
+
+footer .next-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #213555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+footer .next-btn:hover {
+  background-color: #f1356d;
+}
+
+/* === Additional CSS centre aligned ===*/
+/* Ensuring the body fills the screen and centers the form */
+body {
+  background-color: #f5efe7; /* Light background color */
+  display: flex;
+  justify-content: center; /* Centering the content horizontally */
+  align-items: center; /* Centering the content vertically */
+  min-height: 100vh; /* Ensure full viewport height */
+  margin: 0;
+}
+
+/* Input page styling with centered content */
+.input-page {
+  background-color: white; /* Set the background color of the box to white */
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow to create depth */
+  border-radius: 10px;
+  margin: 0 auto; /* Center the box horizontally */
+}
+
+/* Optional: Add a max height with scroll for long content */
+.input-page {
+  max-height: 80vh;
+  overflow-y: auto;
+}
