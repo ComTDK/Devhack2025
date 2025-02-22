@@ -1,5 +1,4 @@
-// FunFact.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaCoffee,
   FaRunning,
@@ -13,21 +12,25 @@ import {
   FaPaintBrush,
   FaFish,
   FaVideo,
-} from "react-icons/fa"; // Importing the icons
-import { useHistory } from "react-router-dom"; // Use useHistory for routing in v5
+} from "react-icons/fa";
 import "./FunFact.css";
 
 function FunFact({ setEvent, event }) {
-  const [selectedHobbies, setSelectedHobbies] = useState([]); // State to track selected hobbies
-  const history = useHistory(); // Use useHistory hook for navigation
+  const [selectedHobbies, setSelectedHobbies] = useState([]); // Track selected hobbies
+  const [timeLeft, setTimeLeft] = useState(5); // Timer state (10 seconds)
 
-  // Function to handle hobby selection
+  // Timer countdown effect
+  useEffect(() => {
+    if (timeLeft > 0) {
+      const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [timeLeft]);
+
   const handleClick = (hobby) => {
     if (selectedHobbies.includes(hobby)) {
-      // If hobby is already selected, remove it
       setSelectedHobbies(selectedHobbies.filter((item) => item !== hobby));
     } else {
-      // If hobby is not selected, add it
       setSelectedHobbies([...selectedHobbies, hobby]);
     }
   };
@@ -35,10 +38,11 @@ function FunFact({ setEvent, event }) {
   return (
     <div className="fun-fact">
       <h3>Hobbies</h3>
+      {/* Timer Display */}
+      <p className="timer"> Mini Timer: {timeLeft}s</p>
       <label>Click on the icons that apply for you</label>
       <br />
 
-      {/* First row of hobbies */}
       <div className="hobbies-grid">
         <div
           className={`icon ${
@@ -74,7 +78,6 @@ function FunFact({ setEvent, event }) {
         </div>
       </div>
 
-      {/* Second row of hobbies */}
       <div className="hobbies-grid">
         <div
           className={`icon ${
@@ -110,7 +113,6 @@ function FunFact({ setEvent, event }) {
         </div>
       </div>
 
-      {/* Third row of hobbies */}
       <div className="hobbies-grid">
         <div
           className={`icon ${
@@ -145,6 +147,7 @@ function FunFact({ setEvent, event }) {
           <FaVideo />
         </div>
       </div>
+
       <div className="fun-fact-input">
         <br />
         <h3>Fun fact</h3>
