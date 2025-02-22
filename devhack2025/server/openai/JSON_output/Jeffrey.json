@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "name": "Jeffrey Antonius Saputra",
+    "contact": {
+      "LinkedIn": "www.linkedin.com/in/jeffrey-antonius"
+    },
+    "education": {
+      "institution": "BINUS University",
+      "degree": "Bachelor's degree in Cyber Security",
+      "year": "2019 - 2023"
+    },
+    "experience": [
+      {
+        "position": "Security Engineer (Red Team)",
+        "company": "DANA Indonesia"
+      },
+      {
+        "position": "Penetration Tester",
+        "company": "Protergo"
+      },
+      {
+        "position": "Penetration Tester Intern",
+        "company": "Protergo"
+      }
+    ]
+  }
+}

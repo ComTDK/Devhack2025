@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "name": "Ronald Susanto",
+    "contact": {
+      "email": "",
+      "linkedin": "www.linkedin.com/in/ronald-s-s"
+    },
+    "education": {
+      "institution": "Universitas Bina Nusantara (Binus)",
+      "degree": "Bachelor of Computer Science",
+      "year": "2004 - 2008"
+    },
+    "experience": [
+      {
+        "position": "Deputy Chief of IT",
+        "company": "Kawan Lama Group"
+      },
+      {
+        "position": "Digital Solution Head",
+        "company": "PT Sierad Produce, Tbk"
+      },
+      {
+        "position": "IT Business Partner & Product Owner",
+        "company": "Prudential Life Assurance"
+      },
+      {
+        "position": "IT Business Delivery Manager",
+        "company": "PT SMART Tbk"
+      },
+      {
+        "position": "IT Business Partner Manager",
+        "company": "PT SMART Tbk"
+      },
+      {
+        "position": "CRM Development Lead",
+        "company": "Accenture"
+      },
+      {
+        "position": "Web Portal Development Lead",
+        "company": "Accenture"
+      },
+      {
+        "position": "Siebel CTI Expert",
+        "company": "Accenture"
+      },
+      {
+        "position": "Siebel Configurator",
+        "company": "Accenture"
+      },
+      {
+        "position": "Java Weblogic Developer",
+        "company": "Accenture"
+      },
+      {
+        "position": "Operational Manager",
+        "company": "TITANS Creative Learning Center"
+      }
+    ]
+  }
+}

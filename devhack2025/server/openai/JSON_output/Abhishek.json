@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "name": "Abhishek Divekar",
+    "contact": {
+      "LinkedIn": "www.linkedin.com/in/ardivekar"
+    },
+    "education": {
+      "institution": "The University of Texas at Austin",
+      "degree": "Master of Science - MS (Thesis track)",
+      "year": "August 2020 - May 2024"
+    },
+    "experience": [
+      {
+        "position": "Senior Applied Scientist",
+        "company": "Amazon"
+      },
+      {
+        "position": "Applied Scientist",
+        "company": "Amazon"
+      },
+      {
+        "position": "Software Development Engineer",
+        "company": "Amazon"
+      },
+      {
+        "position": "Research Assistant",
+        "company": "Veermata Jijabai Technological Institute (VJTI)"
+      },
+      {
+        "position": "Software Development Intern",
+        "company": "Barclays"
+      }
+    ]
+  }
+}

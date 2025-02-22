@@ -1,0 +1,24 @@
+{
+  "summary": {
+    "name": "Satrya Mahardhika",
+    "contact": {
+      "email": "",
+      "LinkedIn": "www.linkedin.com/in/harrmahar"
+    },
+    "education": {
+      "institution": "Sekolah Tinggi Sandi Negara",
+      "degree": "Bachelor's degree",
+      "year": "(2015 - 2019)"
+    },
+    "experience": [
+      {
+        "position": "Penetration Tester",
+        "company": "Badan Siber dan Sandi Negara"
+      },
+      {
+        "position": "Cyber Security Analyst",
+        "company": "Badan Siber dan Sandi Negara"
+      }
+    ]
+  }
+}

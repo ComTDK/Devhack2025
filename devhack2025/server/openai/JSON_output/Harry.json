@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "name": "Harry Limbong",
+    "contact": {
+      "LinkedIn": "www.linkedin.com/in/harry-limbong"
+    },
+    "education": {
+      "institution": "University of Brawijaya",
+      "degree": "Bachelor of Computer Science in Informatics Engineering",
+      "year": ""
+    },
+    "experience": [
+      {
+        "position": "Digital Product Owner",
+        "company": "Kawan Lama Group"
+      },
+      {
+        "position": "IT Function Support Officer",
+        "company": "Unknown"
+      },
+      {
+        "position": "IT Staff Officer",
+        "company": "Savana Hotel & Convention"
+      }
+    ]
+  }
+}

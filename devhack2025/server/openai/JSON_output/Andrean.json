@@ -1,0 +1,35 @@
+{
+  "summary": {
+    "name": "Andrean Chiandra",
+    "contact": {
+      "LinkedIn": "www.linkedin.com/in/andrean-chiandra-7939a3199"
+    },
+    "education": {
+      "institution": "Universitas Prasetiya Mulya",
+      "degree": "Bachelor's degree in Branding",
+      "year": "(September 2019 - September 2023)"
+    },
+    "experience": [
+      {
+        "position": "General Manager",
+        "company": "PT Andalas Agung Lestari"
+      },
+      {
+        "position": "Marketing at UFS",
+        "company": "Unilever"
+      },
+      {
+        "position": "Digital Marketing Specialist Intern",
+        "company": "Oriskin Indonesia"
+      },
+      {
+        "position": "Marketing Coordinator Intern",
+        "company": "Meyer Food"
+      },
+      {
+        "position": "Marketing Intern",
+        "company": "PT SMART Tbk"
+      }
+    ]
+  }
+}
