@@ -1,0 +1,65 @@
+/* Event Container */
+.event {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  text-align: left; /* Align everything to the left */
+}
+
+/* Heading */
+.event h3 {
+  font-size: 24px;
+  color: #213555;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: left; /* Make heading left aligned */
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 16px;
+  color: #213555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px; /* Small gap between the label and the input */
+}
+
+/* Upload Button */
+.upload-photo {
+  margin-top: 20px;
+}
+
+.upload-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #213555;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Ensure icon and text are aligned */
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #7b9fc5;
+}
+
+.upload-btn svg {
+  margin-right: 8px; /* Space between icon and text */
+  color: white; /* Make the icon white */
+}
