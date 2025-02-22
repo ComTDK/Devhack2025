@@ -15,11 +15,7 @@ const InputPage = () => {
 
   // Function to handle "Next" button click
   const handleNext = () => {
-<<<<<<< HEAD
-    if (showFunFact < 3) setShowFunFact(showFunFact + 1); // Show next section
-=======
-    if (showFunFact < 3) setShowFunFact(showFunFact + 1); // Show the FunFact component when the Next button is clicked
->>>>>>> main
+    if (showFunFact < 3) setShowFunFact(showFunFact + 1);
   };
 
   // Function to handle "Previous" button click
@@ -94,8 +90,7 @@ const InputPage = () => {
               placeholder="Enter your name"
             />
           </div>
-        )}
-
+          )}
           <div className="input-group">
             <h4>Contact</h4>
             <label>LinkedIn / Website</label>
