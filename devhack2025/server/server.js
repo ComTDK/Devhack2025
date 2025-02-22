@@ -1,14 +1,19 @@
-var express = require("express"),
-  path = require("path"),
-  bodyParser = require("body-parser"),
-  cons = require("consolidate"),
-  dust = require("dustjs-helpers"),
-  pool = require("../db"),
-  app = express();
+import express from "express";
+import path from "path";
+import bodyParser from "body-parser";
+import cons from "consolidate";
+import dust from "dustjs-helpers";
+import { pool } from "../db.js";
+import { generateMessage } from "./openai/Suggestion.js";
+
+// Getting __dirname equivalent in ES modules
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+const app = express();
 
 app.engine("dust", cons.dust);
 app.set("view engine", "dust");
-app.set("views", __dirname + "/views");
+app.set("views", path.join(__dirname, "views")); // Using path.join to get the correct path
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.json());
@@ -96,6 +101,22 @@ app.delete(`/${TABLE_NAME}/:id`, async (req, res) => {
     res.json({ message: "Car deleted successfully" });
   } catch (err) {
     console.error("Database Delete Error:", err);
+    res.status(500).send("Server Error");
+  }
+});
+
+// Suggestion endpoints
+app.get(`/suggestion/:id`, async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, contact, education, experience } = req.body;
+
+    // Retrieve infor
+    const result = generateMessage("linkedin", req.body, "Marco");
+
+    res.json(result);
+  } catch (err) {
+    console.error("Suggestion error", err);
     res.status(500).send("Server Error");
   }
 });

@@ -1,11 +1,10 @@
-const { Pool } = require("pg");
+import pkg from "pg";
+const { Pool } = pkg; // Destructure Pool from the default export of pg
 
-const pool = new Pool({
+export const pool = new Pool({
   user: "postgres",
-  host: "localhost", // Change this if your DB is remote
+  host: "localhost",
   database: "postgres",
   password: "Marco123",
   port: 5432,
 });
-
-module.exports = pool;

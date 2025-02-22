@@ -4,9 +4,6 @@ import { getOpenAIResponse } from "./follow_Up.js";
 import fs from "fs";
 import path from "path";
 
-const fileInput = path.join(`JSON_output`, `abhishek.json`);
-const summaryData = JSON.parse(fs.readFileSync(fileInput, "utf8"));
-
 async function generateMessage(method, recipientInfo, senderName) {
   let prompt = "";
 
@@ -47,6 +44,7 @@ async function generateMessage(method, recipientInfo, senderName) {
         {
         "recipientInfo": "${recipientInfo.name}",
         "linkedin_url": "${recipientInfo.contact.LinkedIn}",
+        "questions": ["Question 1", "Question 2", ... "Question 10"] (Make the questions to follow up)
         "message": "..."
         }`;
   } else {
@@ -55,8 +53,8 @@ async function generateMessage(method, recipientInfo, senderName) {
 
   const responseText = await getOpenAIResponse(prompt);
   const response = await JSON.parse(responseText);
-  console.log(`Generated ${method} message:\n`, response.message);
-  return response.message;
+  console.log(`Generated ${method} message:\n`, response);
+  return response;
   //   saveFile(method, responseText);
 }
 
@@ -105,5 +103,5 @@ const temp = {
   ],
 };
 
-generateMessage("linkedin", temp, "Patrick");
+// generateMessage("linkedin", temp, "Patrick");
 export { generateMessage };
