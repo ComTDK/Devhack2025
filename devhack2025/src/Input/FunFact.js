@@ -34,12 +34,12 @@ function FunFact({ setEvent, event }) {
 
   return (
     <div className="fun-fact">
-      {/* <h3>Hobbies</h3>
+      <h3>Hobbies</h3>
       <label>Click on the icons that apply for you</label>
       <br />
 
       {/* First row of hobbies */}
-      {/* <div className="hobbies-grid">
+      <div className="hobbies-grid">
         <div
           className={`icon ${
             selectedHobbies.includes("coffee") ? "selected" : ""
@@ -75,7 +75,7 @@ function FunFact({ setEvent, event }) {
       </div>
 
       {/* Second row of hobbies */}
-      {/* <div className="hobbies-grid">
+      <div className="hobbies-grid">
         <div
           className={`icon ${
             selectedHobbies.includes("cooking") ? "selected" : ""
@@ -111,7 +111,7 @@ function FunFact({ setEvent, event }) {
       </div>
 
       {/* Third row of hobbies */}
-      {/* <div className="hobbies-grid">
+      <div className="hobbies-grid">
         <div
           className={`icon ${
             selectedHobbies.includes("cycling") ? "selected" : ""
@@ -144,7 +144,7 @@ function FunFact({ setEvent, event }) {
         >
           <FaVideo />
         </div>
-      </div> */}
+      </div>
       <div className="fun-fact-input">
         <br />
         <h3>Fun fact</h3>

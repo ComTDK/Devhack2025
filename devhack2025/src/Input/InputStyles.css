@@ -35,7 +35,7 @@
 
 /* Header Styling */
 header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 40px; /* More space below the header */
 }
 
@@ -97,7 +97,7 @@ body {
   background-color: #f5efe7; /* Light background color */
   display: flex;
   justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  align-items: left; /* Center content vertically */
   min-height: 100vh; /* Ensure full viewport height */
   margin: 0;
 }
@@ -142,4 +142,49 @@ body {
   margin-bottom: 10px;
   margin-left: auto; /* Center the input box horizontally */
   margin-right: auto; /* Center the input box horizontally */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Ensures items are evenly spaced */
+  align-items: center; /* Vertically aligns content */
+  padding: 15px 40px; /* Adjust padding */
+  background-color: #213555;
+  width: 100%;
+  box-sizing: border-box;
+  position: fixed; /* Keep navbar fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures navbar stays on top */
+}
+
+/* Fix Navbar Links */
+.navbar .links {
+  display: flex;
+  gap: 15px; /* Adds spacing between buttons */
+}
+
+/* Navbar Buttons */
+.navbar .links div {
+  cursor: pointer;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-align: center;
+  background-color: #d8c4b6; /* Button color */
+}
+
+/* Hover Effect */
+.navbar .links div:hover {
+  background-color: #c0a99b;
+}
+
+/* Fix Navbar Title */
+.navbar h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
 }
