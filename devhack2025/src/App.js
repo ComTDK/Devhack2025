@@ -10,20 +10,21 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        {/* The navbar is always visible on every page */}
-        <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/input">
-            <InputPage />
-          </Route>
-          <Route path="/profile">
-            <div style={{ width: "100%" }}>
-              <View /> {/* The View component for profile page */}
-            </div>
-          </Route>
-        </Switch>
+        <div className="main-layout">
+          <div className="content-container">
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route path="/input">
+                <InputPage />
+              </Route>
+              <Route path="/profile">
+                <View />
+              </Route>
+            </Switch>
+          </div>
+        </div>
       </div>
     </Router>
   );
