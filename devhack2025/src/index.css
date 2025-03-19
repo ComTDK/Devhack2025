@@ -18,12 +18,8 @@ h2 {
 
 /* Main layout with flexbox */
 .main-layout {
-  display: flex;
-  justify-content: flex-start; /* Align everything to the left */
-  flex: 1;
-  padding: 20px;
-  gap: 30px; /* Add space between the main content and sidebar */
-  flex-wrap: wrap; /* Allow content to wrap for responsiveness */
+  width: 100%;
+  background-color: "red";
 }
 
 /* Content section */
@@ -32,144 +28,14 @@ h2 {
   margin-left: 0; /* Ensure the content starts from the left */
 }
 
-/* ============== App */
 body {
-  background-color: #f5efe7; /* Apply background color to the whole page */
-  margin: 0; /* Remove any default margin */
-  font-family: "Quicksand", sans-serif; /* Optional: Make sure font is consistent */
+  background-color: #e0e0e0;
 }
 
 .App {
-  background-color: #f5efe7;
   width: 100%; /* Ensure the App container takes up full width */
   margin: 0; /* Remove any default margin */
   padding: 0; /* Remove any default padding */
-}
-
-/* ============== NAVBAR */
-.navbar {
-  padding: 20px;
   display: flex;
-
-  align-items: center;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  background-color: #213555;
-  width: 100%;
-  box-sizing: border-box; /* Ensure padding is included in width */
-  overflow: hidden; /* Prevent overflow */
-}
-
-.navbar .links {
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* Push links to the right side */
-}
-
-.navbar .links div {
-  margin-left: 16px;
-  cursor: pointer;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-.navbar .links div:hover {
-  background-color: #d8c4b6; /* Change background color on hover */
-}
-
-.navbar h1 {
-  color: #f1356d;
-}
-
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-}
-
-/* ================== Memories and Connection components */
-/* Section styles */
-.memories,
-.connections {
-  margin: 40px 0;
-  text-align: left; /* Left-align the content inside the sections */
-  margin-left: 0; /* Make sure sections are aligned to the left */
-}
-
-/* Placeholder styles for future components */
-.memories-placeholder,
-.connections-placeholder {
-  height: 200px; /* Placeholder height, adjust as needed */
-  border: 2px dashed #aaa; /* Dashed border to indicate a placeholder */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #aaa; /* Lighter color for placeholder text */
-  font-size: 16px;
-  text-align: left; /* Left-align the placeholder text */
-}
-
-.memories-placeholder::before,
-.connections-placeholder::before {
-  content: "Your component will go here";
-}
-
-/* Sidebar placeholder with a smaller width */
-.sidebar-placeholder {
-  width: 200px; /* Reduced the sidebar width to 200px */
-  background-color: #f5efe7; /* Background color for sidebar */
-  border-radius: 8px; /* Rounded corners for the sidebar */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #aaa;
-  font-size: 16px;
-}
-
-.sidebar-placeholder::before {
-  content: "Sidebar will go here later";
-}
-
-/* ======== SIDEBAR */
-/* Sidebar with the button to the input page */
-.sidebar-placeholder {
-  width: 200px; /* Adjust width of sidebar */
-  background-color: #f5efe7;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-/* Button styling */
-.go-to-input-btn {
-  padding: 10px 20px;
-  background-color: #213555;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* Hover effect for the button */
-.go-to-input-btn:hover {
-  background-color: #f1356d;
-}
-
-/* Optional: Style the icon and text inside the button */
-.go-to-input-btn svg {
-  width: 20px;
-  height: 20px;
+  flex: 1;
 }

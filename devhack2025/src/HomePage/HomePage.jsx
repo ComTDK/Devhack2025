@@ -5,15 +5,23 @@ import ConnectionCard from "./ConnectionCard/ConnectionCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import MemoryCard from "./MemoryCard/MemoryCard";
+import { IoCameraOutline } from "react-icons/io5";
+import { FaRegHeart } from "react-icons/fa";
+import "./Homepage.css";
+import Sidebar from "./Sidebar";
 const HomePage = () => {
   const settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
+    dots: true, // Show navigation dots
+    infinite: true, // Keep sliding infinitely
+    speed: 500, // Smooth transition speed
+    slidesToShow: 2, // Show multiple slides at once
+    slidesToScroll: 1, // Move one slide at a time
+    swipeToSlide: true, // Allow smooth swipe without snapping to fixed slides
+    draggable: true, // Enable mouse dragging
+    touchThreshold: 15, // Adjust sensitivity for smoother swipe
+    variableWidth: false, // Keep slide width consistent
+    centerMode: false, // Prevent center positioning that might cause overlap
   };
 
   return (
@@ -21,39 +29,148 @@ const HomePage = () => {
       {/* Main content section on the left */}
       <div className="content">
         <section className="memories">
-          <h2>Look back on your memories</h2>
-          <div style={{ width: "600px", margin: "auto" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "10px",
+              alignItems: "center",
+            }}
+          >
+            <IoCameraOutline size={40} />
+            <div style={{ fontWeight: "bold", fontSize: "24px" }}>
+              Look back on your memories
+            </div>
+          </div>
+
+          <div style={{ width: "800px" }}>
             <Slider {...settings}>
-              <ConnectionCard
-                width={200}
-                height={70}
-                name={"Claudius Marco Andrew"}
-                email={"marco123@gmail.com"}
-                experience={"Monkey Pox"}
-                funFact={"Monkey in Pox"}
-              ></ConnectionCard>
-              <ConnectionCard width={200} height={70}></ConnectionCard>
-              <ConnectionCard width={200} height={70}></ConnectionCard>
-              <ConnectionCard width={200} height={70}></ConnectionCard>
-              <ConnectionCard width={200} height={70}></ConnectionCard>
-              <ConnectionCard width={200} height={70}></ConnectionCard>
+              <div style={{ padding: "10px" }}>
+                <MemoryCard
+                  imageProfile="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  imageEvent="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  name="Claudius Marco Andrew"
+                  description="Monkey in the pox"
+                  eventDescription="Career fair"
+                />
+              </div>
+              <div style={{ padding: "10px" }}>
+                <MemoryCard
+                  imageProfile="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  imageEvent="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  name="Claudius Marco Andrew"
+                  description="Monkey in the pox"
+                  eventDescription="Career fair"
+                />
+              </div>
+              <div style={{ padding: "10px" }}>
+                <MemoryCard
+                  imageProfile="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  imageEvent="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  name="Claudius Marco Andrew"
+                  description="Monkey in the pox"
+                  eventDescription="Career fair"
+                />
+              </div>
+              <div style={{ padding: "10px" }}>
+                <MemoryCard
+                  imageProfile="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  imageEvent="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+                  name="Claudius Marco Andrew"
+                  description="Monkey in the pox"
+                  eventDescription="Career fair"
+                />
+              </div>
             </Slider>
           </div>
         </section>
 
         <section className="connections">
-          <h2>Your connections</h2>
-
-          <ConnectionCard></ConnectionCard>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "10px",
+              alignItems: "center",
+              marginBottom: "12px",
+            }}
+          >
+            <FaRegHeart size={40} />
+            <div
+              style={{
+                fontWeight: "bold",
+                fontSize: "24px",
+              }}
+            >
+              Your Connections
+            </div>
+          </div>
+          <ConnectionCard
+            width={80} // Smaller width
+            height={50} // Smaller height
+            name={"Claudius Marco Andrew"}
+            email={"marco123@gmail.com"}
+            experience={"Computer Science Student"}
+            position={"2nd Year Student"}
+            funFact={"I have 3 French Bulldogs waiting for me at home!"}
+            imageProfile={
+              "https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Dog-512.png"
+            }
+          ></ConnectionCard>
+          <ConnectionCard
+            width={80} // Smaller width
+            height={50} // Smaller height
+            name={"John Doe"} // Add a default name
+            email={"johndoe@example.com"} // Add a default email
+            experience={"Web Developer"} // Add a default experience
+            position={"Junior Developer"} // Add a default position
+            funFact={"I love coding!"} // Add a default fun fact
+            imageProfile={
+              "https://cdn-icons-png.flaticon.com/512/4775/4775486.png"
+            }
+          ></ConnectionCard>
+          <ConnectionCard
+            width={80} // Smaller width
+            height={50} // Smaller height
+            name={"John Doe"} // Add a default name
+            email={"johndoe@example.com"} // Add a default email
+            experience={"Web Developer"} // Add a default experience
+            position={"Junior Developer"} // Add a default position
+            funFact={"I love coding!"} // Add a default fun fact
+            imageProfile={
+              "https://cdn-icons-png.flaticon.com/512/4775/4775486.png"
+            }
+          />
+          <ConnectionCard
+            width={80} // Smaller width
+            height={50} // Smaller height
+            name={"Michael Smith"}
+            email={"michael.smith@example.com"}
+            experience={"Data Scientist"}
+            position={"Lead Data Analyst"}
+            funFact={"I’m a coffee enthusiast and a chess player!"}
+            imageProfile={
+              "https://cdn-icons-png.flaticon.com/512/3093/3093444.png"
+            }
+          />
+          <ConnectionCard
+            width={80} // Smaller width
+            height={50} // Smaller height
+            name={"Olivia Brown"}
+            email={"olivia.brown@example.com"}
+            experience={"Marketing Manager"}
+            position={"Head of Digital Marketing"}
+            funFact={"I can solve a Rubik’s Cube in under 2 minutes!"}
+            imageProfile={
+              "https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Penguin-512.png"
+            }
+          />
         </section>
       </div>
 
       {/* Sidebar with a button to go to the input page */}
-      <div className="sidebar-placeholder">
-        <Link to="/input">
-          {/* Link to navigate to InputPage */}
-          <button className="go-to-input-btn">Add Connection</button>
-        </Link>
+      <div style={{ marginLeft: "20px", backgroundColor: "red" }}>
+        <Sidebar></Sidebar>
       </div>
     </div>
   );

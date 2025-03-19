@@ -4,9 +4,10 @@ const ConnectionCard = ({
   name,
   email,
   experience,
+  position,
   funFact,
-}) => {
-  const cardStyle = {
+  imageProfile,
+  cardStyle = {
     width: width + "%",
     height: height + "%",
     borderRadius: "12px",
@@ -14,10 +15,21 @@ const ConnectionCard = ({
     boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
     backgroundColor: "white",
     fontFamily: "Arial, sans-serif",
-  };
+    marginBottom: "20px", // Add marginBottom here by default
+  },
+}) => {
+  // const cardStyle = {
+  //   width: width + "%",
+  //   height: height + "%",
+  //   borderRadius: "12px",
+  //   overflow: "hidden",
+  //   boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  //   backgroundColor: "white",
+  //   fontFamily: "Arial, sans-serif",
+  // };
 
   const headerStyle = {
-    backgroundColor: "#1e3a8a",
+    backgroundColor: "#213555",
     color: "white",
     padding: "16px",
     display: "flex",
@@ -53,9 +65,18 @@ const ConnectionCard = ({
     fontSize: "40px",
     fontWeight: "bold",
     position: "relative",
-    color: "black",
+    color: "white",
     top: "55px",
     left: "16px",
+    textShadow:
+      "1px 1px 0 #213555, " +
+      "-1px -1px 0 #213555, " +
+      "1px -1px 0 #213555, " +
+      "-1px 1px 0 #213555, " +
+      "0px 1px 0 #213555, " +
+      "1px 0px 0 #213555, " +
+      "0px -1px 0 #213555, " +
+      "-1px 0px 0 #213555", // Creating a stroke effect
   };
 
   const textStyle = {
@@ -68,7 +89,7 @@ const ConnectionCard = ({
       <div style={headerStyle}>
         <div style={imageContainerStyle}>
           <img
-            src="/path-to-your-image.png" // Replace with actual image path
+            src={imageProfile} // Replace with actual image path
             alt="Profile"
             style={imageStyle}
           />
@@ -79,7 +100,7 @@ const ConnectionCard = ({
         <p style={textStyle}>
           <strong>Email:</strong> {email} <br />
           <strong>Experience:</strong> {experience} <br />
-          <strong>Position:</strong> <br />
+          <strong>Position:</strong> {position} <br />
           <strong>Fun fact:</strong> {funFact}
         </p>
       </div>

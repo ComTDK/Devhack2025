@@ -4,27 +4,24 @@ import View from "./ViewProfile/View"; // View Profile Component
 import InputPage from "./Input/page"; // Input Page Component
 import HomePage from "./HomePage/HomePage";
 import Navbar from "./HomePage/Navbar";
-
+import "./index.css";
 function App() {
   return (
     <Router>
       <div className="App">
         <Navbar />
-        <div className="main-layout">
-          <div className="content-container">
-            <Switch>
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-              <Route path="/input">
-                <InputPage />
-              </Route>
-              <Route path="/profile">
-                <View />
-              </Route>
-            </Switch>
-          </div>
-        </div>
+
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/input">
+            <InputPage />
+          </Route>
+          <Route path="/profile">
+            <View />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
