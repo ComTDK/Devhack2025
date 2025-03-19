@@ -13,48 +13,44 @@ const InputPage = () => {
   const [funFact, setFunFact] = useState("");
   const [event, setEvent] = useState("");
 
-  // Function to handle "Next" button click
   const handleNext = () => {
     if (showFunFact < 3) setShowFunFact(showFunFact + 1);
   };
 
-  // Function to handle "Previous" button click
   const handlePrevious = () => {
-    if (showFunFact > 1) setShowFunFact(showFunFact - 1); // Go back to previous section
+    if (showFunFact > 1) setShowFunFact(showFunFact - 1);
   };
 
-  // **Function to send data to backend**
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
+    e.preventDefault();
 
-    // Randomized score between 0 and 100
     const randomScore = Math.floor(Math.random() * 101);
 
     const userData = {
       name: name,
-      contactEmail: email, // Fix column name here to match your database column
-      contactLinkedIn: linkedIn, // Fix column name here
+      contactEmail: email,
+      contactLinkedIn: linkedIn,
       education: education,
       experience: experience,
-      score: randomScore, // Add the randomized score here
-      funfact: funFact, // Fix column name here
-      enjoyTalking: Math.floor(Math.random() * 10), // If you want to keep a default value
+      score: randomScore,
+      funfact: funFact,
+      enjoyTalking: Math.floor(Math.random() * 10),
       event: event,
     };
+
     console.log(userData);
+
     try {
       const response = await fetch("http://localhost:3000/connection", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData), // Convert the object to a JSON string
+        body: JSON.stringify(userData),
       });
 
       if (response.ok) {
         alert("Submission successful!");
-
-        // Clear form fields after submission
         setName("");
         setEmail("");
         setLinkedIn("");

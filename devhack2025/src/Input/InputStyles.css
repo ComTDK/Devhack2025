@@ -24,7 +24,7 @@
 
 /* Styling for Input Page */
 .input-page {
-  background-color: #f5efe7;
+  background-color: #ff9409;
   padding: 40px;
   max-width: 600px;
   margin: 0 auto;
@@ -92,16 +92,6 @@ footer .next-btn:hover {
   transform: scale(1.1); /* Slight scale up on hover */
 }
 
-/* Ensure the body fills the screen and centers the form */
-body {
-  background-color: #f5efe7; /* Light background color */
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: left; /* Center content vertically */
-  min-height: 100vh; /* Ensure full viewport height */
-  margin: 0;
-}
-
 /* Center the input page box */
 .input-page {
   background-color: white;
@@ -110,8 +100,8 @@ body {
   width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add depth with shadow */
   border-radius: 10px;
-  margin: 0 auto; /* Center the box horizontally */
-  max-height: 80vh;
+  margin-top: 83px; /* Center the box horizontally */
+  height: 1000px;
   overflow-y: auto;
 }
 

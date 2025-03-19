@@ -8,7 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 import MemoryCard from "./MemoryCard/MemoryCard";
 import { IoCameraOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
-
+import "./Homepage.css";
+import Sidebar from "./Sidebar";
 const HomePage = () => {
   const settings = {
     dots: true, // Show navigation dots
@@ -41,7 +42,8 @@ const HomePage = () => {
               Look back on your memories
             </div>
           </div>
-          <div style={{ width: "600px", margin: "auto" }}>
+
+          <div style={{ width: "800px" }}>
             <Slider {...settings}>
               <div style={{ padding: "10px" }}>
                 <MemoryCard
@@ -104,7 +106,7 @@ const HomePage = () => {
             </div>
           </div>
           <ConnectionCard
-            width={100} // Smaller width
+            width={80} // Smaller width
             height={50} // Smaller height
             name={"Claudius Marco Andrew"}
             email={"marco123@gmail.com"}
@@ -116,7 +118,7 @@ const HomePage = () => {
             }
           ></ConnectionCard>
           <ConnectionCard
-            width={100} // Smaller width
+            width={80} // Smaller width
             height={50} // Smaller height
             name={"John Doe"} // Add a default name
             email={"johndoe@example.com"} // Add a default email
@@ -128,7 +130,7 @@ const HomePage = () => {
             }
           ></ConnectionCard>
           <ConnectionCard
-            width={100} // Smaller width
+            width={80} // Smaller width
             height={50} // Smaller height
             name={"John Doe"} // Add a default name
             email={"johndoe@example.com"} // Add a default email
@@ -140,7 +142,7 @@ const HomePage = () => {
             }
           />
           <ConnectionCard
-            width={100} // Smaller width
+            width={80} // Smaller width
             height={50} // Smaller height
             name={"Michael Smith"}
             email={"michael.smith@example.com"}
@@ -152,7 +154,7 @@ const HomePage = () => {
             }
           />
           <ConnectionCard
-            width={100} // Smaller width
+            width={80} // Smaller width
             height={50} // Smaller height
             name={"Olivia Brown"}
             email={"olivia.brown@example.com"}
@@ -167,11 +169,8 @@ const HomePage = () => {
       </div>
 
       {/* Sidebar with a button to go to the input page */}
-      <div className="sidebar-placeholder">
-        <Link to="/input">
-          {/* Link to navigate to InputPage */}
-          <button className="go-to-input-btn">Add Connection</button>
-        </Link>
+      <div style={{ marginLeft: "20px", backgroundColor: "red" }}>
+        <Sidebar></Sidebar>
       </div>
     </div>
   );
