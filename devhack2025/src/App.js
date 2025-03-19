@@ -10,21 +10,18 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="main-layout">
-          <div className="content-container">
-            <Switch>
-              <Route exact path="/">
-                <HomePage />
-              </Route>
-              <Route path="/input">
-                <InputPage />
-              </Route>
-              <Route path="/profile">
-                <View />
-              </Route>
-            </Switch>
-          </div>
-        </div>
+
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/input">
+            <InputPage />
+          </Route>
+          <Route path="/profile">
+            <View />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );

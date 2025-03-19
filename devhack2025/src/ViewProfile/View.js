@@ -17,12 +17,12 @@ const View = ({ name, email, experience, funFact }) => {
       <div className="profile-container">
         <div className="profile-header">
           <img
-            src="profile-photo-url"
+            src="https://cdn3.iconfinder.com/data/icons/avatars-9/145/Avatar_Rabbit-512.png"
             alt="profile"
             className="profile-photo"
           />
           <div className="profile-info">
-            <h1>{name}</h1>
+            <h1>Ashley Davis</h1>
             <h3>Computer Science @ University of Manitoba</h3>
           </div>
         </div>
@@ -33,7 +33,7 @@ const View = ({ name, email, experience, funFact }) => {
             <h4>
               <FaEnvelope style={{ marginRight: "10px" }} /> Contact
             </h4>
-            <p>Email: {email}</p>
+            <p>Email: AshleyDavis@gmail.com</p>
           </div>
 
           {/* Experience and Positions Section */}
@@ -42,7 +42,8 @@ const View = ({ name, email, experience, funFact }) => {
               <FaBriefcase style={{ marginRight: "10px" }} /> Experience and
               Positions
             </h4>
-            {experience}
+            <p>Software Engineering Intern at Winnipeg Hydro Corp.</p>
+            <p>Research Assistant at University of Manitoba</p>
           </div>
 
           {/* Events Section */}
@@ -60,7 +61,7 @@ const View = ({ name, email, experience, funFact }) => {
             <h4>
               <FaBook style={{ marginRight: "10px" }} /> Fun Fact about me
             </h4>
-            <p>"{funFact}"</p>
+            <p>"I love talking to people and get to make new friends!"</p>
           </div>
 
           {/* Hobbies Section */}
@@ -82,19 +83,21 @@ const View = ({ name, email, experience, funFact }) => {
         <h4>
           <FaLightbulb style={{ marginRight: "10px" }} /> Suggestions
         </h4>
-        <p>
-          Stay in touch! Follow up with your connections within a week for
-          better retention.
-        </p>
+        <ul>
+          <li>
+            Stay in touch! Follow up with your connections within a week for
+            better retention.
+          </li>
+        </ul>
 
         <h4>
           <FaListAlt style={{ marginRight: "10px" }} /> Follow-Up List
         </h4>
         <ul>
-          <li>Email John Doe - Discuss project collaboration</li>
-          <li>Connect with Sarah on LinkedIn</li>
-          <li>Follow up with Mark about the job opening</li>
-          <li>Schedule a coffee chat with Alice</li>
+          <li>• Email John Doe - Discuss project collaboration</li>
+          <li>• Connect with Sarah on LinkedIn</li>
+          <li>• Follow up with Mark about the job opening</li>
+          <li>• Schedule a coffee chat with Alice</li>
         </ul>
       </div>
     </div>

@@ -18,12 +18,7 @@ h2 {
 
 /* Main layout with flexbox */
 .main-layout {
-  display: flex;
-  justify-content: flex-start; /* Align everything to the left */
-  flex: 1;
-  padding: 20px;
-  gap: 30px; /* Add space between the main content and sidebar */
-  flex-wrap: wrap; /* Allow content to wrap for responsiveness */
+  width: 100%;
 }
 
 /* Content section */
@@ -81,12 +76,6 @@ body {
 
 .navbar h1 {
   color: #f1356d;
-}
-
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
 }
 
 /* ================== Memories and Connection components */
