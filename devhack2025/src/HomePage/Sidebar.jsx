@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MdOutlinePersonAddAlt } from "react-icons/md";
 
 const Sidebar = () => {
   // Define styles as objects
@@ -13,20 +14,17 @@ const Sidebar = () => {
       display: "flex",
       justifyContent: "center", // Center items vertically
       alignItems: "center", // Center items horizontally
-      //   backgroundColor: "#4F709C",
       zIndex: 10, // Ensure it stays on top of other content
       marginLeft: "10px",
     },
     links: {
       display: "flex",
-      flexDirection: "column", // Stack links vertically
-      gap: "16px", // Space between links
+      flexDirection: "row", // Stack links vertically
+      gap: "10px", // Space between links
+      alignItems: "center", // Center items horizontally
     },
     linkButton: {
-      color: "white",
-      backgroundColor: "#D8C4B6",
       borderRadius: "8px",
-      padding: "10px 20px",
       textDecoration: "none",
       cursor: "pointer",
       textAlign: "center", // Center text inside the button
@@ -36,7 +34,21 @@ const Sidebar = () => {
   return (
     <div style={sidebarStyles.sidebar}>
       <div style={sidebarStyles.links}>
-        <Link to="/input" style={{ textDecoration: "none" }}>
+        <Link
+          to="/input"
+          style={{
+            textDecoration: "none",
+            display: "flex",
+            flexDirection: "row", // Stack links vertically
+            gap: "5px", // Space between links
+            alignItems: "center", // Center items horizontally
+            fontSize: "20px", // Adjust font size as needed
+            backgroundColor: "#f0f0f0", // Light gray background
+            padding: "10px", // Add padding for better appearance
+            borderRadius: "8px", // Rounded corners for the button
+          }}
+        >
+          <MdOutlinePersonAddAlt size={60} />
           <div style={sidebarStyles.linkButton}>Add connection</div>
         </Link>
       </div>

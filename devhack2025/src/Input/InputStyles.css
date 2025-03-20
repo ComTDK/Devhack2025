@@ -1,44 +1,21 @@
-/* InputStyles.css */
-
-/* Styles for BasicInfo */
-.basic-info .input-group {
-  margin-bottom: 25px; /* Increased space between input groups */
+/* Styles for Basic Info */
+.basic-info {
+  padding: 20px;
+  background-color: #ffffff; /* Light background color */
+  border-radius: 8px; /* Rounded corners for the section */
 }
 
-.basic-info .input-group h3 {
-  font-size: 16px;
-  color: #213555;
-  margin-bottom: 10px; /* Increased space between the label and input */
-  display: block;
-  line-height: 1.5; /* Improved line spacing for better readability */
-}
-
-.basic-info .input-group input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 5px; /* Small gap between the label and the input */
-}
-
-/* Styling for Input Page */
-.input-page {
-  background-color: #ff9409;
-  padding: 40px;
-  max-width: 600px;
-  margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  width: 100%;
-}
-
-/* Header Styling */
+/* Center the header content */
 header {
-  text-align: left;
-  margin-bottom: 40px; /* More space below the header */
+  text-align: center; /* Centers text horizontally */
+  display: flex;
+  flex-direction: column; /* Aligns items vertically */
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Aligns items in the center horizontally */
+  margin-bottom: 40px; /* Optional space below the header */
 }
 
+/* Header title styling */
 header h1 {
   font-size: 28px;
   font-weight: 600;
@@ -46,6 +23,7 @@ header h1 {
   line-height: 1.4; /* Add line spacing for header */
 }
 
+/* Paragraph styling */
 header p {
   color: #888;
   font-size: 16px;
@@ -53,128 +31,54 @@ header p {
   margin-top: 10px; /* Added space between header and paragraph */
 }
 
-/* Footer with Next and Previous Buttons */
-footer {
-  display: flex;
-  justify-content: space-between; /* Space the buttons out on opposite sides */
-  margin-top: 40px;
+.basic-info .input-group {
+  margin-bottom: 25px; /* Increased space between input groups */
 }
 
-/* Previous Button */
-footer .previous-btn {
-  font-size: 14px;
-  background-color: transparent; /* Remove background */
-  color: #213555; /* Set text color */
-  cursor: pointer;
-  border: none; /* Make sure no border */
-  padding: 0; /* Remove padding */
-  transition: color 0.3s, transform 0.3s ease;
+.basic-info .input-group h4 {
+  font-size: 18px; /* Larger font size for headings */
+  color: #213555; /* Darker text color */
+  margin-bottom: 10px; /* Increased space between the label and input */
+  font-weight: 600; /* Bold font for labels */
 }
 
-footer .previous-btn:hover {
-  color: #213555; /* Keep text color */
-  transform: scale(1.1); /* Slight scale up on hover */
+.basic-info .input-group input {
+  width: 90%;
+  padding: 14px 18px; /* Larger padding for better user interaction */
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px; /* Rounded input fields */
+  margin-top: 5px; /* Small gap between the label and the input */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
-/* Next Button */
-footer .next-btn {
-  font-size: 14px;
-  background-color: transparent; /* Remove background */
-  color: #213555; /* Set text color */
-  cursor: pointer;
-  border: none; /* Make sure no border */
-  padding: 0; /* Remove padding */
-  transition: color 0.3s, transform 0.3s ease;
+.basic-info .input-group input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #ff9409; /* Border color change when focused */
+  box-shadow: 0 0 5px rgba(255, 148, 9, 0.6); /* Soft glow effect on focus */
 }
 
-footer .next-btn:hover {
-  color: #213555; /* Keep text color */
-  transform: scale(1.1); /* Slight scale up on hover */
+/* Optional: Add a hover effect on the input fields */
+.basic-info .input-group input:hover {
+  border-color: #ff9409; /* Highlight input fields on hover */
+  background-color: #fdfdfd; /* Subtle change in background color */
 }
 
-/* Center the input page box */
+/* Additional Styling for the Input Container */
 .input-page {
   background-color: white;
   padding: 40px;
   max-width: 600px;
-  width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add depth with shadow */
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin-top: 83px; /* Center the box horizontally */
-  height: 1000px;
-  overflow-y: auto;
-}
-
-/* Ensure inputs are well aligned */
-.input-group {
-  margin-bottom: 25px; /* Increased space between sections */
-}
-
-/* Optional: Add max-height with scroll for long content */
-.input-page {
-  max-height: 80vh;
-  overflow-y: auto;
-}
-
-/* Basic Info Button */
-/* Styles for BasicInfo */
-/* Resizing the input boxes */
-.basic-info .input-group input {
-  width: calc(
-    100% - 30px
-  ); /* Adjust the input width by calculating the space */
-  padding: 10px 12px; /* Adjust padding */
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 5px;
-  display: block; /* Make input field a block element */
-  margin-bottom: 10px;
-  margin-left: auto; /* Center the input box horizontally */
-  margin-right: auto; /* Center the input box horizontally */
-}
-
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Ensures items are evenly spaced */
-  align-items: center; /* Vertically aligns content */
-  padding: 15px 40px; /* Adjust padding */
-  background-color: #213555;
   width: 100%;
-  box-sizing: border-box;
-  position: fixed; /* Keep navbar fixed at the top */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000; /* Ensures navbar stays on top */
+  height: 600px;
+  margin-top: 85px; /* Added top margin */
+  overflow-y: auto;
 }
 
-/* Fix Navbar Links */
-.navbar .links {
-  display: flex;
-  gap: 15px; /* Adds spacing between buttons */
-}
-
-/* Navbar Buttons */
-.navbar .links div {
-  cursor: pointer;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-  text-align: center;
-  background-color: #d8c4b6; /* Button color */
-}
-
-/* Hover Effect */
-.navbar .links div:hover {
-  background-color: #c0a99b;
-}
-
-/* Fix Navbar Title */
-.navbar h1 {
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
+input[type="text"],
+input[type="email"] {
+  font-family: "Arial", sans-serif; /* Clean font */
 }
