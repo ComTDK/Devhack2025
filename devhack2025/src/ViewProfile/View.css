@@ -1,9 +1,11 @@
-/* Layout */
+/* General Layout */
 .main-layout {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
   padding: 40px;
+  background-color: #f5f5f5; /* Subtle background for the whole page */
+  border-radius: 10px;
 }
 
 /* Profile Container */
@@ -12,108 +14,105 @@
   padding: 40px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
+
 /* Profile Header */
 .profile-header {
   display: flex;
   width: 100%;
   align-items: center;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #ececec;
 }
 
-/* Flexbox for photo and details */
-.photo-name-container {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-/* Profile Photo with Shadow and Circle */
 .profile-photo {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%; /* Ensures the image is circular */
-  object-fit: cover; /* Ensures the image fills the circle properly */
-  margin-right: 20px; /* Adds space between the photo and text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow around the photo */
+  width: 160px;
+  height: 160px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover;
+  margin-right: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
 }
 
-.profile-details {
-  text-align: left;
-}
-
-.profile-header h1 {
+/* Profile Text Styling */
+.profile-info h1 {
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 10px;
+  color: #213555;
 }
 
-.profile-header h3 {
-  font-size: 16px;
-  margin-bottom: 20px;
+.profile-info h3 {
+  font-size: 18px;
+  color: #888;
+  margin-top: 10px;
 }
 
 /* Profile Body */
 .profile-body {
-  padding: 40px;
+  padding-top: 20px;
 }
 
 /* Sections */
 .section {
-  margin-bottom: 30px; /* Increased space between sections */
+  margin-bottom: 35px;
 }
 
 .section h4 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   color: #213555;
-  margin-bottom: 10px;
-  display: inline-flex; /* Align icon and text inline */
-  align-items: center; /* Align the icon and text vertically */
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .section p,
 .section ul {
   font-size: 16px;
   color: #555;
-  margin-left: 20px; /* Indent the list for better visual hierarchy */
+  margin-left: 20px;
 }
 
 ul {
-  list-style-type: none; /* Remove the default list style */
+  list-style-type: none;
   padding-left: 0;
 }
 
 ul li {
   font-size: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff9409; /* Use accent color for list bullet */
 }
 
 /* Sidebar */
 .sidebar {
   flex: 1;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   max-width: 300px;
+  margin-top: 40px; /* Margin for better spacing */
 }
 
+/* Sidebar Title Styling */
 .sidebar h4 {
   font-size: 18px;
   font-weight: bold;
   color: #213555;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-}
-
-.sidebar p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 15px;
 }
 
 .sidebar ul {
@@ -123,8 +122,26 @@ ul li {
 
 .sidebar ul li {
   font-size: 14px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: #444;
+  padding-left: 15px;
+}
+
+.sidebar ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2196f3; /* Blue for sidebar bullet points */
+}
+
+/* Buttons and Icon Styling */
+.icon {
+  margin-right: 10px;
+  color: #2196f3;
+}
+
+.icon:hover {
+  color: #ff9409; /* Accent color on hover */
 }
 
 /* Responsive Design */
@@ -132,11 +149,31 @@ ul li {
   .main-layout {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
 
   .sidebar {
     width: 100%;
     max-width: none;
     margin-top: 20px;
+  }
+
+  .profile-container {
+    width: 100%;
+    max-width: 900px;
+  }
+
+  .profile-photo {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+  }
+
+  .profile-header h1 {
+    font-size: 28px;
+  }
+
+  .profile-header h3 {
+    font-size: 16px;
   }
 }

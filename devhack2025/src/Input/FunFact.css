@@ -38,7 +38,7 @@ label {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #a2b9c7;
+  background-color: #9ad4f9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,9 +55,9 @@ label {
 
 /* When icon is selected */
 .icon.selected {
-  background-color: #848ea2;
+  background-color: #94b6f9;
   color: white;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Input field for fun fact */
@@ -80,7 +80,7 @@ label {
 .timer {
   font-size: 16px;
   font-weight: bold;
-  color: #ef4842; /* Red color for urgency */
+  color: #2392ec; /* Red color for urgency */
   margin-bottom: 10px;
   text-align: ceter;
 }

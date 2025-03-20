@@ -12,10 +12,10 @@ import "./Homepage.css";
 import Sidebar from "./Sidebar";
 const HomePage = () => {
   const settings = {
-    dots: true, // Show navigation dots
-    infinite: true, // Keep sliding infinitely
+    dots: false, // Show navigation dots
+    infinite: false, // Keep sliding infinitely
     speed: 500, // Smooth transition speed
-    slidesToShow: 2, // Show multiple slides at once
+    slidesToShow: 4, // Show multiple slides at once
     slidesToScroll: 1, // Move one slide at a time
     swipeToSlide: true, // Allow smooth swipe without snapping to fixed slides
     draggable: true, // Enable mouse dragging
@@ -43,7 +43,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <div style={{ width: "800px" }}>
+          <div style={{ width: "1200px" }}>
             <Slider {...settings}>
               <div style={{ padding: "10px" }}>
                 <MemoryCard

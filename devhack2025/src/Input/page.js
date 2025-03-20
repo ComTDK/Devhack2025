@@ -96,7 +96,7 @@ const InputPage = () => {
               onChange={(event) => setLinkedIn(event.target.value)}
               placeholder="Enter your LinkedIn/Website"
             />
-            <label>Email</label>
+            <label style={{ marginTop: "12px" }}>Email</label>
             <input
               type="email"
               value={email}
@@ -112,18 +112,62 @@ const InputPage = () => {
       {showFunFact === 3 && <EventInput setEvent={setEvent} event={event} />}
 
       {/* Footer with Navigation Buttons */}
-      <footer>
+      <footer
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          alignContent: "space-between",
+        }}
+      >
         {showFunFact > 1 && (
           <button
             type="button"
-            className="previous-btn"
+            style={{
+              backgroundColor: "#2392ec",
+              color: "white" /* Text color */,
+              fontSize: "16px" /* Font size */,
+              padding: "12px 20px" /* Button padding */,
+              border: "none" /* Remove default border */,
+              borderRadius: "5px" /* Rounded corners */,
+              cursor: "pointer" /* Pointer cursor on hover */,
+              transition:
+                "background-color 0.3s ease, transform 0.3s ease" /* Smooth transition */,
+            }}
             onClick={handlePrevious}
+            onMouseOver={(e) =>
+              (e.target.style.backgroundColor = "#94b6f9")
+            } /* Darker orange on hover */
+            onMouseOut={(e) =>
+              (e.target.style.backgroundColor = "#2392ec")
+            } /* Reset to original color */
           >
             ← Previous
           </button>
         )}
+
         {showFunFact < 3 && (
-          <button type="button" className="next-btn" onClick={handleNext}>
+          <button
+            type="button"
+            onClick={handleNext}
+            style={{
+              backgroundColor: "#2392ec",
+              color: "white" /* Text color */,
+              fontSize: "16px" /* Font size */,
+              padding: "12px 20px" /* Button padding */,
+              border: "none" /* Remove default border */,
+              borderRadius: "5px" /* Rounded corners */,
+              cursor: "pointer" /* Pointer cursor on hover */,
+              transition:
+                "background-color 0.3s ease, transform 0.3s ease" /* Smooth transition */,
+            }}
+            onMouseOver={(e) =>
+              (e.target.style.backgroundColor = "#94b6f9")
+            } /* Darker orange on hover */
+            onMouseOut={(e) =>
+              (e.target.style.backgroundColor = "#2392ec")
+            } /* Reset to original color */
+          >
             Next →
           </button>
         )}
